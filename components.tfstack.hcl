@@ -37,15 +37,18 @@ component "pet" {
 }
 
 component "nulls" {
+  for_each = { for i in range(var.instances) : i => i }  # Creates multiple components
+
   source = "./nulls"
 
   inputs = {
     pet       = component.pet.name
-    instances = var.instances  # Keep it as a number
+    instance_id = each.key  # Unique ID for each instance
   }
 
   providers = {
     null = provider.null.this
   }
 }
+
 

@@ -19,11 +19,9 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  for_each = { for i in range(var.instances) : i => i }  # Create a map based on instances
-
   triggers = {
-    pet   = var.pet
-    index = each.key
+    pet         = var.pet
+    instance_id = var.instances  # Unique per instance
   }
 }
 
