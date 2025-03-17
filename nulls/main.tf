@@ -21,7 +21,7 @@ variable "instances" {
 resource "null_resource" "this" {
   triggers = {
     pet         = var.pet
-    instance_id = var.instances  # Unique per instance
+    instances = var.instances  # Unique per instance
   }
 }
 

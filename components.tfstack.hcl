@@ -43,7 +43,7 @@ component "nulls" {
 
   inputs = {
     pet       = component.pet.name
-    instance_id = each.key  # Unique ID for each instance
+    instances = each.key  # Unique ID for each instance
   }
 
   providers = {
