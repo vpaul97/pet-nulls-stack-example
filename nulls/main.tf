@@ -19,14 +19,15 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  for_each = { for i in range(var.instances) : i => i }
+  for_each = { for i in range(var.instances) : i => i }  # Create a map based on instances
 
   triggers = {
-    pet = var.pet
+    pet   = var.pet
     index = each.key
   }
 }
 
 output "ids" {
-  value = [for n in null_resource.this: n.id]
+  value = [for n in null_resource.this : n.id]
 }
+

@@ -41,10 +41,11 @@ component "nulls" {
 
   inputs = {
     pet       = component.pet.name
-    instances = { for i in range(var.instances) : i => i }  # Converts to a map
+    instances = var.instances  # Keep it as a number
   }
 
   providers = {
     null = provider.null.this
   }
 }
+
