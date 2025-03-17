@@ -11,7 +11,12 @@ terraform {
 }
 
 variable "pet" {
-  type = string
+  type        = map(string)
+  default     = {
+    resource1 = "First resource"
+    resource2 = "Second resource"
+    resource3 = "Third resource"
+  }
 }
 
 variable "instances" {
@@ -19,10 +24,12 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  count = var.instances
+  for_each = var.pet
+
+  # count = var.instances
 
   triggers = {
-    pet = var.pet
+    pet = each.value
   }
 }
 
