@@ -19,10 +19,11 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  count = var.instances
+  for_each = { for i in range(var.instances) : i => i }
 
   triggers = {
     pet = var.pet
+    index = each.key
   }
 }
 
