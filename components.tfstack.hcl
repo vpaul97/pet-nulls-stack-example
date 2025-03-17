@@ -37,12 +37,10 @@ component "pet" {
 }
 
 component "nulls" {
-  for_each = var.environments
-
   source = "./nulls"
 
   inputs = {
-    pet       = component.pet[each.value].name
+    pet       = component.pet.name
     instances = var.instances
   }
 
