@@ -38,10 +38,11 @@ component "pet" {
 
 component "nulls" {
   source = "./nulls"
+  for_each = toset([1, 2, 3, 4])
 
   inputs = {
     pet       = component.pet.name
-    instances = var.instances
+    instances = each.key
   }
 
   providers = {
