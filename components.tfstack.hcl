@@ -37,14 +37,17 @@ component "pet" {
 }
 
 component "nulls" {
+  for_each = var.instances  # Iterate over the instances map
+
   source = "./nulls"
 
   inputs = {
-    pet       = component.pet.name
-    instances = var.instances
+    pet         = component.pet.name
+    instance_id = each.key  # Assigns a unique instance ID
   }
 
   providers = {
     null = provider.null.this
   }
 }
+
