@@ -40,9 +40,9 @@ component "nulls" {
   source = "./nulls"
   for_each = tomap({
     g1       = 1
-    g2 = 2
-    g3 = 3
-    g4 = 4
+    g2 = 1
+    g3 = 1
+    g4 = 1
   })
 
   inputs = {
