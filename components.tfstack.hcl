@@ -41,7 +41,7 @@ component "nulls" {
   for_each = tomap({
     # g1       = 1
     # g2 = 1
-    g3 = 1
+    # g3 = 1
     g4 = 1
     g5 = 1
   })
