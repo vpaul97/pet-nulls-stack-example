@@ -14,18 +14,18 @@ variable "pet" {
   type = string
 }
 
-variable "instance_id" {
-  type = string
+variable "instances" {
+  type = number
 }
 
 resource "null_resource" "this" {
+  count = var.instances
+
   triggers = {
-    pet         = var.pet
-    instance_id = var.instance_id  # Unique per instance
+    pet = var.pet
   }
 }
 
-output "id" {
-  value = null_resource.this.id
+output "ids" {
+  value = [for n in null_resource.this: n.id]
 }
-
