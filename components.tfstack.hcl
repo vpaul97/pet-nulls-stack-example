@@ -68,6 +68,9 @@ removed {
   })
 
   from = component.nulls[each.key]
+  lifecycle {
+    destroy = true
+  }
   providers = {
     null = provider.null.this
   }
