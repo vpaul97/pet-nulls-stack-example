@@ -41,7 +41,7 @@ component "nulls" {
   for_each = tomap({
     # g1 = 1
     g2 = 1
-    # g3 = 1
+    g3 = 1
     g4 = 1
     g5 = 1
     g6 = 1
@@ -74,19 +74,19 @@ removed {
 
 }
 
-removed {
-  source = "./nulls"
-
-  for_each = tomap({
-    # g1 = 1
-    # g2 = 1
-    g3 = 1
-    # g4 = 1
-  })
-
-  from = component.nulls[each.key]
-  providers = {
-    null = provider.null.this
-  }
-
-}
+# removed {
+#   source = "./nulls"
+#
+#   for_each = tomap({
+#     # g1 = 1
+#     # g2 = 1
+#     g3 = 1
+#     # g4 = 1
+#   })
+#
+#   from = component.nulls[each.key]
+#   providers = {
+#     null = provider.null.this
+#   }
+#
+# }
