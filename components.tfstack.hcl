@@ -39,8 +39,8 @@ component "pet" {
 component "nulls" {
   source = "./nulls"
   for_each = tomap({
-    # g1 = 1
-    # g2 = 1
+    g1 = 1
+    g2 = 1
     g3 = 1
     g4 = 1
     g5 = 1
@@ -57,22 +57,22 @@ component "nulls" {
   }
 }
 
-removed {
-  source = "./nulls"
-
-  for_each = tomap({
-    g1 = 1
-    g2 = 1
-    # g3 = 1
-    # g4 = 1
-  })
-
-  from = component.nulls[each.key]
-  lifecycle {
-    destroy = true
-  }
-  providers = {
-    null = provider.null.this
-  }
-
-}
+# removed {
+#   source = "./nulls"
+#
+#   for_each = tomap({
+#     g1 = 1
+#     g2 = 1
+#     # g3 = 1
+#     # g4 = 1
+#   })
+#
+#   from = component.nulls[each.key]
+#   lifecycle {
+#     destroy = true
+#   }
+#   providers = {
+#     null = provider.null.this
+#   }
+#
+# }
