@@ -43,8 +43,8 @@ component "nulls" {
     # g2 = 1
     # g3 = 1
     # g4 = 1
-    g5 = 1
-    g6 = 1
+    # g5 = 1
+    # g6 = 1
   })
 
   inputs = {
@@ -61,10 +61,11 @@ removed {
   source = "./nulls"
 
   for_each = tomap({
-    g1 = 1
-    g2 = 1
+    # g1 = 1
+    # g2 = 1
     # g3 = 1
     # g4 = 1
+    g5 = 1
   })
 
   from = component.nulls[each.key]
@@ -80,8 +81,9 @@ removed {
   for_each = tomap({
     # g1 = 1
     # g2 = 1
-    g3 = 1
-    g4 = 1
+    # g3 = 1
+    # g4 = 1
+    g6 = 1
   })
 
   from = component.nulls[each.key]
