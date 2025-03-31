@@ -45,6 +45,7 @@ component "nulls" {
     g4 = 1
     g5 = 1
     g6 = 1
+    g7 = 1
   })
 
   inputs = {
