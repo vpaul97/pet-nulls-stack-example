@@ -6,7 +6,7 @@ deployment "simple" {
     prefix           = "simple"
     instances        = 1
   }
-  destroy = foo
+  destroy = false
 }
 
 deployment "complex" {
