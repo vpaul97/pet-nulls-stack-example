@@ -6,7 +6,7 @@ deployment "simple" {
     prefix           = "simple"
     instances        = 1
   }
-  import = true
+  import = "foo"
 }
 
 deployment "complex" {
