@@ -24,9 +24,9 @@
 #   }
 # }
 
-deployment "complex3" {
+deployment "complex" {
   inputs = {
-    prefix           = "complex2"
+    prefix           = "complex"
     instances        = 2
   }
   destroy = true
