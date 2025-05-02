@@ -6,7 +6,7 @@ deployment "simple1" {
     prefix           = "simple"
     instances        = 1
   }
-  destroy = false
+  import = false
 }
 
 deployment "complex" {
