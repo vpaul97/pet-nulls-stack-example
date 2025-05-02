@@ -14,6 +14,7 @@ deployment "complex" {
     prefix           = "complex"
     instances        = 3
   }
+  import = true
 }
 
 deployment "complex2" {
