@@ -17,10 +17,10 @@ deployment "complex" {
   import = true
 }
 
-deployment "complex2" {
-  inputs = {
-    prefix           = "complex2"
-    instances        = 2
-  }
-}
+# deployment "complex2" {
+#   inputs = {
+#     prefix           = "complex2"
+#     instances        = 2
+#   }
+# }
 
