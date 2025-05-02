@@ -6,7 +6,7 @@ deployment "simple" {
     prefix           = "simple"
     instances        = 1
   }
-  destroy = true
+  destroy = false
 }
 
 deployment "complex" {
@@ -17,10 +17,10 @@ deployment "complex" {
   import = true
 }
 
-# deployment "complex2" {
-#   inputs = {
-#     prefix           = "complex2"
-#     instances        = 2
-#   }
-# }
+deployment "complex2" {
+  inputs = {
+    prefix           = "complex2"
+    instances        = 2
+  }
+}
 
