@@ -29,5 +29,5 @@ deployment "complex3" {
     prefix           = "complex2"
     instances        = 2
   }
-  import = true
+  destroy = true
 }
