@@ -9,25 +9,24 @@ deployment "simple" {
   # destroy = false
 }
 
-# deployment "complex" {
-#   inputs = {
-#     prefix           = "complex"
-#     instances        = 3
-#   }
-#   # import = true
-# }
-#
-# deployment "complex2" {
-#   inputs = {
-#     prefix           = "complex2"
-#     instances        = 2
-#   }
-# }
-#
-# deployment "complex3" {
-#   inputs = {
-#     prefix           = "complex3"
-#     instances        = 2
-#   }
-# }
+deployment "complex" {
+  inputs = {
+    prefix           = "complex"
+    instances        = 3
+  }
+}
+
+deployment "complex2" {
+  inputs = {
+    prefix           = "complex2"
+    instances        = 2
+  }
+}
+
+deployment "complex3" {
+  inputs = {
+    prefix           = "complex3"
+    instances        = 2
+  }
+}
 
