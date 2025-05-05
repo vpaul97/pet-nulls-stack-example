@@ -6,15 +6,15 @@ deployment "simple" {
     prefix           = "simple"
     instances        = 1
   }
-  destroy = true
+  destroy = false
 }
 
-# deployment "complex" {
-#   inputs = {
-#     prefix           = "complex"
-#     instances        = 3
-#   }
-# }
+deployment "complex" {
+  inputs = {
+    prefix           = "complex"
+    instances        = 3
+  }
+}
 
 deployment "complex2" {
   inputs = {
