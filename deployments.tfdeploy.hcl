@@ -9,12 +9,12 @@ deployment "simple" {
   destroy = true
 }
 
-deployment "complex" {
-  inputs = {
-    prefix           = "complex"
-    instances        = 3
-  }
-}
+# deployment "complex" {
+#   inputs = {
+#     prefix           = "complex"
+#     instances        = 3
+#   }
+# }
 
 deployment "complex2" {
   inputs = {
