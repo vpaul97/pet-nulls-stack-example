@@ -17,12 +17,12 @@ deployment "complex" {
   destroy = false
 }
 
-# deployment "complex2" {
-#   inputs = {
-#     prefix           = "complex2"
-#     instances        = 2
-#   }
-# }
+deployment "complex2" {
+  inputs = {
+    prefix           = "complex2"
+    instances        = 2
+  }
+}
 
 # deployment "complex3" {
 #   inputs = {
