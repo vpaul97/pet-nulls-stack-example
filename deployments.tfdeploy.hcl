@@ -13,6 +13,7 @@ deployment "complex" {
     prefix           = "complex"
     instances        = 3
   }
+  destroy = true
 }
 
 deployment "complex2" {
