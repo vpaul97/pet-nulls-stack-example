@@ -22,3 +22,10 @@ deployment "complex2" {
     instances        = 3
   }
 }
+
+deployment "complex3" {
+  inputs = {
+    prefix           = "complex3"
+    instances        = 3
+  }
+}
