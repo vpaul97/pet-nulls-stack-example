@@ -3,7 +3,7 @@
 
 deployment "dev-env-1" {
   inputs = {
-    prefix           = "development"
+    prefix           = "dev"
     instances        = 1
   }
   deployment_group = deployment_group.dev
