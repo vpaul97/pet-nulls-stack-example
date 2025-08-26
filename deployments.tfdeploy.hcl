@@ -9,6 +9,7 @@ deployment "dev-env-1" {
   deployment_group = deployment_group.dev
 }
 
+/*
 deployment "dev-env-2" {
   inputs = {
     prefix           = "simple"
@@ -16,6 +17,7 @@ deployment "dev-env-2" {
   }
   deployment_group = deployment_group.dev
 }
+*/
 
 deployment "complex" {
   inputs = {
