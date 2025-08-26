@@ -6,7 +6,7 @@ deployment "dev-env-1" {
     prefix           = "simple"
     instances        = 1
   }
-  deployment_group = deployment_group.simple
+  deployment_group = deployment_group.dev
 }
 
 deployment "dev-env-2" {
@@ -14,7 +14,7 @@ deployment "dev-env-2" {
     prefix           = "simple"
     instances        = 1
   }
-  deployment_group = deployment_group.simple
+  deployment_group = deployment_group.dev
 }
 
 deployment "complex" {
