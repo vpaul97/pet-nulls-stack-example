@@ -1,7 +1,15 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-deployment "simple" {
+deployment "dev-env-1" {
+  inputs = {
+    prefix           = "simple"
+    instances        = 1
+  }
+  deployment_group = deployment_group.simple
+}
+
+deployment "dev-env-2" {
   inputs = {
     prefix           = "simple"
     instances        = 1
@@ -38,7 +46,7 @@ deployment "complex4" {
   }
 }
 
-deployment_group "simple" {
+deployment_group "dev" {
   auto_approve_checks = [deployment_auto_approve.no_destroy]
 }
 
