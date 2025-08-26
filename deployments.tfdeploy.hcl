@@ -3,7 +3,7 @@
 
 deployment "dev-env-1" {
   inputs = {
-    prefix           = "simple"
+    prefix           = "development"
     instances        = 1
   }
   deployment_group = deployment_group.dev
@@ -19,31 +19,24 @@ deployment "dev-env-2" {
 }
 */
 
-deployment "complex" {
+deployment "prod-1" {
   inputs = {
-    prefix           = "complex"
+    prefix           = "prod-1"
     instances        = 3
   }
   destroy = false
 }
 
-deployment "complex2" {
+deployment "prod-2" {
   inputs = {
-    prefix           = "complex2"
+    prefix           = "prod-2"
     instances        = 3
   }
 }
 
-deployment "complex3" {
+deployment "staging" {
   inputs = {
-    prefix           = "complex3"
-    instances        = 3
-  }
-}
-
-deployment "complex4" {
-  inputs = {
-    prefix           = "complex4"
+    prefix           = "staging"
     instances        = 3
   }
 }
