@@ -10,9 +10,9 @@ deployment "dev-env-1" {
 }
 
 /*
-deployment "dev-env-2" {
+deployment "dev-env-extra" {
   inputs = {
-    prefix           = "simple"
+    prefix           = "dev-2"
     instances        = 1
   }
   deployment_group = deployment_group.dev
